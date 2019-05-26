@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
 {
 
     // MOVEMENT
-    private float currentSpeed = 0.0f;
     public float playerSpeed = 4.0f;
 
     private Rigidbody2D rigidbody;
