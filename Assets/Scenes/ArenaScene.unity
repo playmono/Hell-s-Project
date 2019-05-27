@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 164177520}
   - component: {fileID: 164177519}
   m_Layer: 0
-  m_Name: PlayerFallingPlaceHolder
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74de210c906f749bcb200a20fe79bd4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentSpeed: 4
+  currentSpeed: 5
 --- !u!212 &164177520
 SpriteRenderer:
   m_ObjectHideFlags: 0
