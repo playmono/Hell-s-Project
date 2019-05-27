@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementInFall : MonoBehaviour
 {
 
     // MOVEMENT
@@ -31,9 +31,9 @@ public class PlayerMovement : MonoBehaviour
     private void Move()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
-        float moveVertical = Input.GetAxis("Vertical");
+        //float moveVertical = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        Vector2 movement = new Vector2(moveHorizontal, 0f);
         rigidbody.velocity = movement * playerSpeed;
 
         //Limita el movimiento dentro de la camara principal
