@@ -24,7 +24,10 @@ public class ArenaController : MonoBehaviour
     private void LoadArena(GameObject arena)
     {
         GameObject.Destroy(this.currentArena);
-        this.currentArena = Instantiate(arena, new Vector2(0.0f, 0.0f), Quaternion.identity);
+
+        this.currentArena = Object.Instantiate(arena, new Vector2(0.0f, 0.0f), Quaternion.identity);
+        this.currentArena.name = arena.name;
+
         this.arenasLeft.Remove(arena);
     }
 
@@ -36,8 +39,12 @@ public class ArenaController : MonoBehaviour
             }
         }
 
-        GameObject randomArena = this.arenasLeft[Random.Range(0, this.arenasLeft.Count)];
+        GameObject nextArena = null;
 
-        this.LoadArena(randomArena);
+        do {
+            nextArena = this.arenasLeft[Random.Range(0, this.arenasLeft.Count)];
+        } while (this.currentArena != null && nextArena.name == this.currentArena.name);
+
+        this.LoadArena(nextArena);
     }
 }
