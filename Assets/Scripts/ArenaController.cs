@@ -36,7 +36,7 @@ public class ArenaController : MonoBehaviour
         bool addCurrentArena = false;
 
         if (this.arenasLeft.Count == 0) {
-             if (this.currentArena != null) {
+            if (this.currentArena != null) {
                 this.arenasLeft.AddRange(this.arenas.FindAll(x => x.name != this.currentArena.name));
                 addCurrentArena = true;
             } else {
@@ -46,7 +46,7 @@ public class ArenaController : MonoBehaviour
 
         GameObject nextArena = this.arenasLeft[Random.Range(0, this.arenasLeft.Count)];
 
-        if (addLastArena) {
+        if (addCurrentArena) {
             this.arenasLeft.Add(this.arenas.Find(x => x.name == this.currentArena.name));
         }
 
