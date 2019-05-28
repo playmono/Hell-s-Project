@@ -33,17 +33,22 @@ public class ArenaController : MonoBehaviour
 
     private void nextArena()
     {
+        bool addCurrentArena = false;
+
         if (this.arenasLeft.Count == 0) {
-            foreach (GameObject arena in arenas) {
-                this.arenasLeft.Add(arena);
+             if (this.currentArena != null) {
+                this.arenasLeft.AddRange(this.arenas.FindAll(x => x.name != this.currentArena.name));
+                addCurrentArena = true;
+            } else {
+                this.arenasLeft.AddRange(this.arenas);
             }
         }
 
-        GameObject nextArena = null;
+        GameObject nextArena = this.arenasLeft[Random.Range(0, this.arenasLeft.Count)];
 
-        do {
-            nextArena = this.arenasLeft[Random.Range(0, this.arenasLeft.Count)];
-        } while (this.currentArena != null && nextArena.name == this.currentArena.name);
+        if (addLastArena) {
+            this.arenasLeft.Add(this.arenas.Find(x => x.name == this.currentArena.name));
+        }
 
         this.LoadArena(nextArena);
     }
