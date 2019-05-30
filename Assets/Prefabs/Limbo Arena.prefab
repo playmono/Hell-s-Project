@@ -74,5 +74,29 @@ PrefabInstance:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 7037553554468097118, guid: 5e249a515f54641ee9448d6f0784ea41,
+        type: 3}
+      propertyPath: bigEnemy
+      value: 
+      objectReference: {fileID: 5504262143132604252, guid: ea4d304eecaef46448f9ede309f378db,
+        type: 3}
+    - target: {fileID: 7037553554468097118, guid: 5e249a515f54641ee9448d6f0784ea41,
+        type: 3}
+      propertyPath: debufferEnemy
+      value: 
+      objectReference: {fileID: 3276137872484403162, guid: f7c93a896c4244f7ca5e9bac26b55f70,
+        type: 3}
+    - target: {fileID: 7037553554468097118, guid: 5e249a515f54641ee9448d6f0784ea41,
+        type: 3}
+      propertyPath: miniboss
+      value: 
+      objectReference: {fileID: 3498538824734195187, guid: ec18b8b1b12db4febbbc44d47f179b10,
+        type: 3}
+    - target: {fileID: 7037553554468097118, guid: 5e249a515f54641ee9448d6f0784ea41,
+        type: 3}
+      propertyPath: smallEnemy
+      value: 
+      objectReference: {fileID: 7743618652832144602, guid: 9dd3d966b39014ab4835b89fba86b946,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e249a515f54641ee9448d6f0784ea41, type: 3}

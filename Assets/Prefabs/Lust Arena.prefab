@@ -132,5 +132,29 @@ PrefabInstance:
       propertyPath: m_Text
       value: Lust Arena
       objectReference: {fileID: 0}
+    - target: {fileID: 8599167256762383846, guid: af08bd2b73d4646e49491e30c19685c4,
+        type: 3}
+      propertyPath: bigEnemy
+      value: 
+      objectReference: {fileID: 556405103978432138, guid: 166463f744faa42acb32825c31f4082c,
+        type: 3}
+    - target: {fileID: 8599167256762383846, guid: af08bd2b73d4646e49491e30c19685c4,
+        type: 3}
+      propertyPath: debufferEnemy
+      value: 
+      objectReference: {fileID: 3221244392149665541, guid: f58b517b7213f4cd1a5e445ef6b80420,
+        type: 3}
+    - target: {fileID: 8599167256762383846, guid: af08bd2b73d4646e49491e30c19685c4,
+        type: 3}
+      propertyPath: miniboss
+      value: 
+      objectReference: {fileID: 6834383241703883248, guid: e4dd262f5386b46dca22c84a69c7cde0,
+        type: 3}
+    - target: {fileID: 8599167256762383846, guid: af08bd2b73d4646e49491e30c19685c4,
+        type: 3}
+      propertyPath: smallEnemy
+      value: 
+      objectReference: {fileID: 8020426538053685025, guid: 9af8095df5f8a407a88aa37ebe4ec760,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af08bd2b73d4646e49491e30c19685c4, type: 3}

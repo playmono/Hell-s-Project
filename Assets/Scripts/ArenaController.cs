@@ -6,7 +6,7 @@ public class ArenaController : MonoBehaviour
 {
     public List<GameObject> arenas = new List<GameObject>();
 
-    private GameObject currentArena;
+    private GameObject currentArenaInstance;
     private List<GameObject> arenasLeft = new List<GameObject>();
 
     private void Start()
@@ -23,10 +23,10 @@ public class ArenaController : MonoBehaviour
 
     private void LoadArena(GameObject arena)
     {
-        GameObject.Destroy(this.currentArena);
+        GameObject.Destroy(this.currentArenaInstance);
 
-        this.currentArena = Object.Instantiate(arena, new Vector2(0.0f, 0.0f), Quaternion.identity);
-        this.currentArena.name = arena.name;
+        this.currentArenaInstance = Object.Instantiate(arena, new Vector2(0.0f, 0.0f), Quaternion.identity);
+        this.currentArenaInstance.name = arena.name;
 
         this.arenasLeft.Remove(arena);
     }
@@ -36,8 +36,8 @@ public class ArenaController : MonoBehaviour
         bool addCurrentArena = false;
 
         if (this.arenasLeft.Count == 0) {
-            if (this.currentArena != null) {
-                this.arenasLeft.AddRange(this.arenas.FindAll(x => x.name != this.currentArena.name));
+            if (this.currentArenaInstance != null) {
+                this.arenasLeft.AddRange(this.arenas.FindAll(x => x.name != this.currentArenaInstance.name));
                 addCurrentArena = true;
             } else {
                 this.arenasLeft.AddRange(this.arenas);
@@ -47,7 +47,7 @@ public class ArenaController : MonoBehaviour
         GameObject nextArena = this.arenasLeft[Random.Range(0, this.arenasLeft.Count)];
 
         if (addCurrentArena) {
-            this.arenasLeft.Add(this.arenas.Find(x => x.name == this.currentArena.name));
+            this.arenasLeft.Add(this.arenas.Find(x => x.name == this.currentArenaInstance.name));
         }
 
         this.LoadArena(nextArena);

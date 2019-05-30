@@ -72,5 +72,34 @@ PrefabInstance:
       propertyPath: m_Text
       value: Greed Arena
       objectReference: {fileID: 0}
+    - target: {fileID: 1174811552368698268, guid: 3b4ac114f1af4404d83082a4b12d05ba,
+        type: 3}
+      propertyPath: miniboss.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174811552368698268, guid: 3b4ac114f1af4404d83082a4b12d05ba,
+        type: 3}
+      propertyPath: bigEnemy
+      value: 
+      objectReference: {fileID: 6677140731296044655, guid: ad9edf39f697c42fba273bbeec1099b6,
+        type: 3}
+    - target: {fileID: 1174811552368698268, guid: 3b4ac114f1af4404d83082a4b12d05ba,
+        type: 3}
+      propertyPath: debufferEnemy
+      value: 
+      objectReference: {fileID: 6554550153976350358, guid: 3587976a9a96e4ad18fbeadcd1428914,
+        type: 3}
+    - target: {fileID: 1174811552368698268, guid: 3b4ac114f1af4404d83082a4b12d05ba,
+        type: 3}
+      propertyPath: miniboss
+      value: 
+      objectReference: {fileID: 6221315073098247284, guid: 871ed7f8aad2445ac8390387c30b2eab,
+        type: 3}
+    - target: {fileID: 1174811552368698268, guid: 3b4ac114f1af4404d83082a4b12d05ba,
+        type: 3}
+      propertyPath: smallEnemy
+      value: 
+      objectReference: {fileID: 3278740372694022292, guid: e0fbe1842ee0746a9951abd694524a4d,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3b4ac114f1af4404d83082a4b12d05ba, type: 3}
