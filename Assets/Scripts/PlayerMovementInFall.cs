@@ -7,6 +7,7 @@ public class PlayerMovementInFall : MonoBehaviour
 
     // MOVEMENT
     public float playerSpeed = 4.0f;
+    private bool enableMovement = false;
 
     private Rigidbody2D rigidbody;
 
@@ -27,21 +28,29 @@ public class PlayerMovementInFall : MonoBehaviour
         Move();
     }
 
+    //Habilitar o desabilitar movimiento
+    public void EnableMove(bool newState)
+    {
+        enableMovement = newState;
+    }
+
     //Mover el personaje
     private void Move()
     {
-        float moveHorizontal = Input.GetAxis("Horizontal");
-        //float moveVertical = Input.GetAxis("Vertical");
+        if (enableMovement)
+        {
+            float moveHorizontal = Input.GetAxis("Horizontal");
+            //float moveVertical = Input.GetAxis("Vertical");
 
-        Vector2 movement = new Vector2(moveHorizontal, 0f);
-        rigidbody.velocity = movement * playerSpeed;
+            Vector2 movement = new Vector2(moveHorizontal, 0f);
+            rigidbody.velocity = movement * playerSpeed;
 
-        //Limita el movimiento dentro de la camara principal
-        var pos = Camera.main.WorldToViewportPoint(transform.position);
-        pos.x = Mathf.Clamp(pos.x, 0.1f, 0.9f);
-        pos.y = Mathf.Clamp(pos.y, 0.1f, 0.9f);
-        transform.position = Camera.main.ViewportToWorldPoint(pos);
-
+            //Limita el movimiento dentro de la camara principal
+            var pos = Camera.main.WorldToViewportPoint(transform.position);
+            pos.x = Mathf.Clamp(pos.x, 0.1f, 0.9f);
+            pos.y = Mathf.Clamp(pos.y, 0.1f, 0.9f);
+            transform.position = Camera.main.ViewportToWorldPoint(pos);
+        }
 
     }
 }
