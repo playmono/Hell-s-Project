@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShakeEffect : MonoBehaviour
+public class ShakeEffect : MonoBehaviour
 {
     // vars
     public bool shakeOn = true;

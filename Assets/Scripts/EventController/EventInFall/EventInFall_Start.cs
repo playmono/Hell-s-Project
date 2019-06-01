@@ -24,10 +24,8 @@ public class EventInFall_Start : Event
         if (eventInPlay)
         {
             player.transform.position = Vector2.SmoothDamp(player.transform.position, startPoint.transform.position, ref playerVelocity, 1.5f);
-            Debug.Log("Player: " + player.transform.position.y + "     Start Point: " + startPoint.transform.position.y);
             if (player.transform.position.y <= startPoint.transform.position.y + 0.5f )
             {
-                Debug.Log("Stop event");
                 eventInPlay = false;
                 player.GetComponent<PlayerMovementInFall>().EnableMove(true);
             }
