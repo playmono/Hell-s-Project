@@ -11,7 +11,6 @@ public class PlayerMovementInFall : MonoBehaviour
 
     private bool facingRight = true;
 
-
     // Start is called before the first frame update
     private void Start()
     {
