@@ -37,6 +37,9 @@ public class EnemyMovementInFall : MonoBehaviour
             case "UpForward":
                 MoveUpForward();
                 break;
+            case "DownForward":
+                MoveDownForward();
+                break;
             default:
                 Debug.LogError("Movement type: " + selectedMovementType + ", no existe");
                 break;
@@ -46,6 +49,12 @@ public class EnemyMovementInFall : MonoBehaviour
     private void MoveUpForward()
     {
         Vector2 movement = new Vector2(0f, 1f);
+        this.GetComponent<Rigidbody2D>().velocity = movement * enemySpeed;
+    }
+
+    private void MoveDownForward()
+    {
+        Vector2 movement = new Vector2(0f, -1f);
         this.GetComponent<Rigidbody2D>().velocity = movement * enemySpeed;
     }
 }
