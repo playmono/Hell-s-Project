@@ -22,5 +22,7 @@ public class SoulCollision : MonoBehaviour
         {
             Destroy(this.transform.parent.gameObject);
         }
+
+        PlayerStats.AddSouls(1);
     }
 }

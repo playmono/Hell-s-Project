@@ -1,14 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameControllerInFall : MonoBehaviour
 {
 
-    public GameObject Soul;
-    public GameObject Hazard;
-    public Transform SoulSpawnPoint;
-    public Transform HazardSpawnPoint;
+    public GameObject soul;
+    public GameObject hazard;
+    public Transform soulSpawnPoint;
+    public Transform hazardSpawnPoint;
+    public Text soulsText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,13 +21,13 @@ public class GameControllerInFall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        soulsText.text = "Souls: " + PlayerStats.GetSouls();
     }
 
     public void SpawnWaves()
     {
-        Instantiate(Soul, SoulSpawnPoint.position, Quaternion.identity);
-        Instantiate(Hazard, HazardSpawnPoint.position, Quaternion.identity);
+        Instantiate(soul, soulSpawnPoint.position, Quaternion.identity);
+        Instantiate(hazard, hazardSpawnPoint.position, Quaternion.identity);
     }
 
 }

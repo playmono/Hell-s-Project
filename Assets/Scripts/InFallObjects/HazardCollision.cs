@@ -22,5 +22,6 @@ public class HazardCollision : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+        PlayerStats.RemoveSouls(1);
     }
 }
